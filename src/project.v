@@ -15,7 +15,7 @@ module tt_um_sowmya_hamming_top (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
-
+ 
     // Internal signals
     wire [6:0] encoded_out;     // encoder output
    // wire [3:0] corrected_out;   // decoder corrected output
