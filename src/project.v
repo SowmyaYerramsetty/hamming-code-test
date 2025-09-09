@@ -60,6 +60,10 @@ endmodule
  * Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
+/*
+ * Copyright (c) 2024 Your Name
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
 `default_nettype none
 
@@ -81,11 +85,6 @@ module tt_um_sowmya_hamming_top (
     wire [6:0] encoded_out;
 
     // Map data bits to encoded_out positions:
-    // Based on your encoder logic from before:
-    // encoded_out[6] = data_in[3]
-    // encoded_out[5] = data_in[2]
-    // encoded_out[4] = data_in[1]
-    // encoded_out[2] = data_in[0]
     assign encoded_out[6:4] = data_in[3:1];
     assign encoded_out[2]   = data_in[0];
 
@@ -98,7 +97,7 @@ module tt_um_sowmya_hamming_top (
     assign uo_out[6:0] = encoded_out;
     assign uo_out[7]   = 1'b0;  // explicitly assign the MSB to zero
 
-    // Not used in this design: set to zero
+    // Assign zero to unused IO ports as per your request
     assign uio_out = 8'b0;
     assign uio_oe  = 8'b0;
 
